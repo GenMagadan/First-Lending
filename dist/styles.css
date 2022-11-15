@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --typeface-header: Candara;
+  --typeface-main: Roboto;
+  --typeface-weight-medium: 200;
+  --typeface-weight-regular: 600;
+  --color-container: beige;
+  --color-true: red;
+  --color-false: brown;
+  --color-content: lightgray;
+}
+
+.container {
+  background: var(--color-container);
+  padding-top: 20px;
+}
+
+header {
+  width: 100vw;
+  background: var(--color-container);
+  padding-block: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+  top: 0;
+}
+header h1 {
+  font-family: var(--typeface-header);
+  font-weight: var(--typeface-weight-regular);
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 0.15px;
+  font-style: italic;
+  text-transform: uppercase;
+  text-shadow: rgba(255, 0, 0, 0.22) 1px 3px;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  header h1 {
+    font-size: 32px;
+  }
+}
+header button {
+  width: 50vw;
+  padding: 0 50px;
+  font-family: var(--typeface-header);
+  font-weight: var(--typeface-weight-regular);
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.15px;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--color-container);
+  text-decoration: none;
+  transition: 0.2s;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 3px 5px rgba(0, 1, 6, 0.5), 0 0 1px 1px rgba(0, 1, 6, 0.2);
+  background: var(--color-true);
+}
+@media (max-width: 800px) {
+  header button {
+    font-size: 20px;
+  }
+}
+header button:hover {
+  background: var(--color-false);
+  opacity: 0.8;
+}
+header #histori {
+  width: 35vw;
+  text-align: center;
+  background-color: var(--color-true);
+  padding: 5px 30px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 3px 5px rgba(0, 1, 6, 0.5), 0 0 1px 1px rgba(0, 1, 6, 0.2);
+}
+header #histori h2 {
+  font-family: var(--typeface-header);
+  font-weight: var(--typeface-weight-regular);
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px !important;
+  padding: 20px;
+  margin-top: 185px;
+  margin-inline: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+main p {
+  font-family: var(--typeface-main);
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05px;
+  text-indent: 10px;
+}
+main h3 {
+  font-family: var(--typeface-main);
+  font-size: 20px;
+  line-height: 18px;
+  letter-spacing: 0.05px;
+  text-indent: 10px;
+  padding-block: 10px;
+}
+main span {
+  font-family: var(--typeface-header);
+  font-weight: var(--typeface-weight-regular);
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: var(--color-true);
+}
+main.trueStory {
+  background: var(--color-true);
+}
+main.trueStory .profile {
+  display: grid;
+  grid-template-columns: minmax(150px, 2fr) minmax(200px, 3fr);
+  gap: 20px;
+}
+main.trueStory .profile .foto {
+  background-image: url(../dist/foto/lavr-true.jpg);
+  background-size: cover;
+  height: 300px;
+  border-radius: 8px;
+}
+main.trueStory .profile .drawing {
+  background-image: url(../dist/foto/nuclear_station.jpg);
+  background-size: cover;
+  height: 300px;
+  border-radius: 8px;
+}
+main.falseStory {
+  background: brown;
+}
+main.falseStory .profile {
+  display: grid;
+  grid-template-columns: minmax(200px, 3fr) minmax(150px, 2fr);
+  gap: 20px;
+}
+main.falseStory .profile .foto {
+  background-image: url(../dist/foto/stupid_lies.jpg);
+  background-size: cover;
+  height: 300px;
+  border-radius: 8px;
+}
+main.falseStory .profile .drawing {
+  background-image: url(../dist/foto/lavr-false.jpg);
+  background-size: cover;
+  height: 300px;
+  border-radius: 8px;
+}
+main.falseStory .profile.less {
+  display: none;
+}
+@media (max-width: 1050px) {
+  main {
+    margin-top: 240px;
+  }
+}
+@media (max-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+main .side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .side .left {
+  margin-bottom: 20px;
+}
+main .present,
+main .mith {
+  background: var(--color-content);
+  padding: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) inset;
+  border-radius: 8px;
+}
+
+footer {
+  padding: 20px 80px;
+  text-align: center;
+}
+footer h1 {
+  font-family: var(--typeface-header);
+  font-weight: var(--typeface-weight-regular);
+  font-size: 30px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  text-shadow: rgba(0, 0, 0, 0.22) 1px 3px;
+}
+
+#box-2 {
+  display: none;
+}
