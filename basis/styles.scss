@@ -55,8 +55,9 @@ header {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   gap: 10px;
-   position: fixed;
+   gap: 20px;
+   will-change: transform;
+   position: sticky;
    top: 0;
 
    h1 {
@@ -116,7 +117,7 @@ main {
    grid-template-columns: 1fr 1fr;
    gap: 20px !important;
    padding: 20px;
-   margin-top: 185px;
+   margin-block: 10px;
    margin-inline: 25px;
    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
@@ -204,10 +205,6 @@ main {
             }
          }
       }
-   }
-
-   @media (max-width: 1050px) {
-      margin-top: 240px;
    }
 
    @media (max-width: 800px) {
